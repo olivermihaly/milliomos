@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Font;
+  src: url("../assets/fonts/font.ttf");
+}
+
+.main-container {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  margin:0;
+}
+
+.game-container{
+  background-image: linear-gradient(60deg,rgb(60, 0, 100), rgb(15, 0, 102));
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.answer-button{
+  font-size: 20px;
+  font-weight:bold;
+  border-radius:10px;
+  padding:10px;
+  background-image: linear-gradient(rgb(1, 9, 42), rgb(0, 8, 94));
+  border:1.5px solid white;
+  cursor:pointer;
+  transition:all 300ms ease;
+  color: white;
+  width:300px;
+  text-align:left;
+}
+
+.answer-button:hover{
+  transform: scale(1.05);
+  background-image: linear-gradient( rgb(0, 8, 94), rgb(1, 9, 42));
+
+}
+.answer-label{
+color: rgb(193, 143, 114)
+}
+
+.answer-container{
+  display:grid;
+  grid-template-columns: 300px 300px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin:20px;
+}
+
+.answer-button:focus{
+  background-image: linear-gradient( red, rgb(1, 9, 42));
+
+}
+
+.question{
+  font-size: 20px;
+  font-weight:bold;
+  border-radius:10px;
+  padding:10px;
+  background-image: linear-gradient(rgb(1, 9, 42), rgb(0, 8, 94));
+  border:1.5px solid white;
+  color: white;
+  width:500px;
+  text-align: center;
+}
+
+.logo{
+  background-image: url("../assets/images/logo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width:500px;
+  height:500px;
+  margin:50px;
+}

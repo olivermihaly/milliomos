@@ -1,34 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import GameScreen from "./screens/GameScreen";
+import "./styles/styles.css";
+
+const question = {
+    question: "Melyik nem a szarvasmarha emésztőszerve?",
+    answers: [
+        {
+            label: "A",
+            answer: "recés gyomor",
+            correct: false,
+        },
+        {
+            label: "B",
+            answer: "leveles gyomor",
+            correct: false,
+        },
+        {
+            label: "C",
+            answer: "oltó gyomor",
+            correct: true,
+        },
+        {
+            label: "D",
+            answer: "ürbél",
+            correct: false,
+        },
+    ],
+};
+
+const question2 = {
+    question: "Melyik ne?",
+    answers: [
+        {
+            label: "A",
+            answer: "recés",
+            correct: false,
+        },
+        {
+            label: "B",
+            answer: "leveles",
+            correct: false,
+        },
+        {
+            label: "C",
+            answer: "oltó",
+            correct: true,
+        },
+        {
+            label: "D",
+            answer: "ürbél 2wq35 123",
+            correct: false,
+        },
+    ],
+};
+
+const a = [question, question2];
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    return (
+        <div className="main-container">
+            <GameScreen question={a[0]} />
+        </div>
+    );
 }
 
-export default App
+export default App;
